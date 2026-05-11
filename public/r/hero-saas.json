@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero-saas",
+  "title": "Hero SaaS",
+  "description": "Hero premium pour landing SaaS : badge de statut, titre serif italique, deux CTA, animation Motion staggered.",
+  "dependencies": [
+    "motion",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/blocks/hero-saas/hero-saas.tsx",
+      "content": "\"use client\";\n\nimport { motion } from \"motion/react\";\nimport { ArrowRight } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\n\nconst ease = [0.22, 1, 0.36, 1] as const;\n\nconst stagger = {\n  hidden: {},\n  visible: { transition: { staggerChildren: 0.08 } },\n};\n\nconst fadeUp = {\n  hidden: { opacity: 0, y: 8 },\n  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },\n};\n\nexport default function HeroSaaS() {\n  return (\n    <section className=\"relative flex min-h-[80vh] flex-col items-center justify-center px-6 py-32\">\n      <motion.div\n        initial=\"hidden\"\n        animate=\"visible\"\n        variants={stagger}\n        className=\"mx-auto max-w-3xl text-center\"\n      >\n        <motion.div\n          variants={fadeUp}\n          className=\"inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/50 px-3 py-1 text-xs font-medium text-neutral-600 backdrop-blur dark:border-neutral-800 dark:bg-neutral-950/50 dark:text-neutral-400\"\n        >\n          <span className=\"size-1.5 rounded-full bg-emerald-500\" />\n          Disponible en bêta\n        </motion.div>\n\n        <motion.h1\n          variants={fadeUp}\n          className=\"mt-6 font-serif text-5xl leading-[1.05] tracking-tight md:text-7xl\"\n        >\n          La plateforme dont vos équipes parlent{\" \"}\n          <em className=\"italic\">déjà</em>.\n        </motion.h1>\n\n        <motion.p\n          variants={fadeUp}\n          className=\"mx-auto mt-6 max-w-xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-400\"\n        >\n          Un produit pensé pour livrer plus vite, sans sacrifier la qualité.\n          Configurez, déployez, mesurez — en quelques minutes.\n        </motion.p>\n\n        <motion.div\n          variants={fadeUp}\n          className=\"mt-10 flex items-center justify-center gap-3\"\n        >\n          <Button size=\"lg\">\n            Démarrer gratuitement\n            <ArrowRight />\n          </Button>\n          <Button size=\"lg\" variant=\"ghost\">\n            Parler à l'équipe\n          </Button>\n        </motion.div>\n      </motion.div>\n    </section>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/sections/hero-saas.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

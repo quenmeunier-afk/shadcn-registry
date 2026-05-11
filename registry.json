@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "quenmeunier-registry",
+  "homepage": "https://shadcn-registry.vercel.app",
+  "items": [
+    {
+      "name": "hero-saas",
+      "type": "registry:block",
+      "title": "Hero SaaS",
+      "description": "Hero premium pour landing SaaS : badge de statut, titre serif italique, deux CTA, animation Motion staggered.",
+      "dependencies": ["motion", "lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/hero-saas/hero-saas.tsx",
+          "type": "registry:block",
+          "target": "components/sections/hero-saas.tsx"
+        }
+      ]
+    }
+  ]
+}
