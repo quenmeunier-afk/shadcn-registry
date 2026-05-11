@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "quenmeunier-registry",
-  "homepage": "https://shadcn-registry.vercel.app",
+  "homepage": "https://shadcn-registry-dun.vercel.app",
   "items": [
     {
       "name": "hero-saas",

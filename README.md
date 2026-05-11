@@ -7,7 +7,7 @@ Registry shadcn personnel — composants premium prêts à installer via `shadcn
 Dans n'importe quel projet shadcn :
 
 ```bash
-npx shadcn@latest add https://shadcn-registry.vercel.app/r/hero-saas.json
+npx shadcn@latest add https://shadcn-registry-dun.vercel.app/r/hero-saas.json
 ```
 
 Le composant et ses dépendances (motion, lucide-react, et le composant `button` de shadcn) sont installés automatiquement.
